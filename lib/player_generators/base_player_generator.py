@@ -4,14 +4,15 @@ import string
 from lib.base import *
 
 class BasePlayerGenerator():
-    def __init__(self, number_of_players):
+    def __init__(self, number_of_players, baseline = 0):
         self.number_of_players = number_of_players
-        self.player_base = self.generate_player_base(number_of_players)
+        self.baseline = baseline
+        self.player_base = self.generate_player_base(number_of_players, baseline)
 
-    def generate_player_base(self, number_of_players):
+    def generate_player_base(self, number_of_players, baseline = 0):
         player_base = {}
         length_of_player_names = self.calculate_needed_length_of_player_names(number_of_players)
-        for i in range(0, number_of_players):
+        for i in range(baseline, number_of_players + baseline):
             player_name = self.map_integer_to_string(i, length_of_player_names)
             player_base[player_name] = i
         return player_base
