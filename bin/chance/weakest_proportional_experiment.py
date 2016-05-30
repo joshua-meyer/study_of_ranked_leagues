@@ -1,6 +1,6 @@
 from lib.base import *
 from lib.player_generators.base_player_generator import BasePlayerGenerator
-from lib.matches.weakest_proportional_chance_match import WeakestProportionalChanceMatch
+from lib.matches.chance_based_matches.weakest_proportional_chance_match import WeakestProportionalChanceMatch
 from lib.tiered_leagues.base_tiered_league import BaseTieredLeague
 
 from sys import argv

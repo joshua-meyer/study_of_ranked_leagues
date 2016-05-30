@@ -1,6 +1,6 @@
 from lib.base import *
 from lib.player_generators.base_player_generator import BasePlayerGenerator
-from lib.matches.weakest_loses_match import WeakestLosesMatch
+from lib.matches.deterministic_matches.weakest_loses_match import WeakestLosesMatch
 from lib.tiered_leagues.base_tiered_league import BaseTieredLeague
 
 pb = BasePlayerGenerator(10000)
